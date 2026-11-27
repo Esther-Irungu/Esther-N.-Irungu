@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data visualisations | Esther N. Irungu</title>
+<meta name="description" content="Charts, dashboards and interactive outputs that make data patterns clearer and evidence easier to use.">
+<meta name="author" content="Esther N. Irungu">
+<meta name="theme-color" content="#101b2d">
+<link rel="stylesheet" href="project-pages.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<nav aria-label="Project navigation">
+  <a class="brand" href="index.html#home">Esther N. Irungu <span aria-hidden="true">·</span> Portfolio</a>
+  <div class="nav-tools">
+    <a href="index.html#projects">All project collections</a>
+    <a href="https://www.linkedin.com/in/esther-irungu/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <button id="theme" aria-pressed="false">Dark mode</button>
+  </div>
+</nav>
+<main id="main">
+  <p class="breadcrumb"><a href="index.html#home">Portfolio</a> / <a href="index.html#projects">Data Science &amp; Analytics</a> / Data visualisations</p>
+  <header class="page-hero">
+    <p class="eyebrow">03 · MAKING PATTERNS VISIBLE</p>
+    <h1>Data visualisations</h1>
+    <p class="intro">Charts, dashboards and interactive outputs that make data patterns clearer and evidence easier to use.</p>
+  </header>
+  <section class="project-space" aria-labelledby="collection-title">
+    <div>
+      <p class="space-label">Project collection in progress</p>
+      <h2 id="collection-title">A space for work in progress and new insights.</h2>
+      <p>This collection will feature visual work as it is ready to share, with context on what the data shows, how to read the visual and what insight it brings forward.</p>
+      <div class="topic-list"><span>Charts</span><span>Dashboards</span><span>Interactive outputs</span><span>Visual storytelling</span></div>
+    </div>
+    <div class="project-mark" aria-hidden="true">DV</div>
+  </section>
+  <section class="project-guidance" aria-labelledby="format-title">
+    <p class="eyebrow">A clear thread from question to insight</p>
+    <h2 id="format-title">What each project will show</h2>
+    <p>Each entry will make the analytical process easy to follow, from the question being asked to the insight that the evidence supports.</p>
+    <div class="steps">
+      <div class="step"><b>01</b><span>Question</span></div>
+      <div class="step"><b>02</b><span>Data</span></div>
+      <div class="step"><b>03</b><span>Approach</span></div>
+      <div class="step"><b>04</b><span>Insight</span></div>
+    </div>
+  </section>
+  <footer class="page-footer">
+    <a href="index.html#projects">← Back to all project categories</a>
+    <a href="python-projects.html">Next: Python projects →</a>
+  </footer>
+</main>
+<script>
+const themeButton=document.getElementById('theme');
+function applyTheme(isDark){document.body.classList.toggle('dark',isDark);themeButton.textContent=isDark?'Light mode':'Dark mode';themeButton.setAttribute('aria-pressed',String(isDark))}
+let dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+try{const saved=localStorage.getItem('ei-theme');if(saved)dark=saved==='dark'}catch(e){}
+applyTheme(dark);
+themeButton.addEventListener('click',()=>{dark=!document.body.classList.contains('dark');applyTheme(dark);try{localStorage.setItem('ei-theme',dark?'dark':'light')}catch(e){}});
+</script>
+</body>
+</html>
+
